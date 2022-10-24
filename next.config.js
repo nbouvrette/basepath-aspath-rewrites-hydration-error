@@ -1,6 +1,10 @@
 const rewrites = async () => {
   return [
     {
+      source: "/mon-dossier",
+      destination: "/my-directory",
+    },
+    {
       source: "/mon-dossier/:id",
       destination: "/my-directory/:id",
     },
