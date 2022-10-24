@@ -19,7 +19,7 @@ If you navigate to the URL using a rewrite [http://localhost:3000/some-path/mon-
 
 To confirm the unexpected behavior, you can see in your browser that the first path segment is `mon-dossier` while if you open a `view page source` and search for `first-path-segment`, the value in the SSR markup is `some-path` (the value of `basePath`).
 
-#### Hypothesis
+### Hypothesis
 
 - this issue is probably a child-issue related to https://github.com/vercel/next.js/issues/41741 but the main difference is that it is **only triggered when using dynamic routes**.
 - To confirm that this is related to dynamic routes and/or `getStaticPaths`/`getStaticProps`, when going on the non-dynamic route URL http://localhost:3000/some-path/mon-dossier, `basePath` is not returned
